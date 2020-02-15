@@ -42,7 +42,7 @@ public class ControllerRest {
 			ErrorModel em = new ErrorModel(HttpStatus.INTERNAL_SERVER_ERROR.value(), "please try again, after some times");
 			throw new InternalServerError(em);
 		}
-		return ResponseEntity.status(HttpStatus.CREATED).body(savedProduct);
+		return ResponseEntity.status(HttpStatus.CREATED).build();
 	}
 	
 	@GetMapping("/getByProductName/{productName}")
